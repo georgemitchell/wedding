@@ -132,9 +132,6 @@
             minutes: 60 - Math.floor((((settings.end - settings.now) % 86400) % 3600) / 60),
             seconds: 60 - Math.floor((((settings.end - settings.now) % 86400) % 3600) % 60 )
         }
-        console.log('hi');
-        console.log(timer);
-        console.log(settings);
     }
 
     function prepareCounters() {

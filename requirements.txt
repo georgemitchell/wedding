@@ -1,3 +1,4 @@
 # 1.8 LTS through APR 2018
 django==1.8
 django-environ==0.3.0
+django-maintenancemode==0.11.2

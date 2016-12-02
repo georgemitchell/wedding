@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MAINTENANCE_MODE = True
 
 # Application definition
 
@@ -42,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'maintenancemode'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -53,6 +55,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'maintenancemode.middleware.MaintenanceModeMiddleware',
 )
 
 ROOT_URLCONF = 'config.urls'

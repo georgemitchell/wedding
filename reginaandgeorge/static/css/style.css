@@ -237,49 +237,49 @@ input, textarea {
 	top: 0px;
 }
 .bg-loveline {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/static/img/loveline-back.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .bg-people {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/static/img/people-back.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .bg-wedding {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/static/img/wedding-back.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .bg-gifts {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/static/img/gifts-back.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .bg-rsvp {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/static/img/rsvp-back.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .bg-couple {
-	background: url(http://placehold.it/1920x1080) no-repeat center center;
+	background: url(/static/img/couple-back.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .bg-home {
-	background: url(http://cdn.wallpapersafari.com/78/5/AkwHRG.jpg) no-repeat center center;
+	background: url(/static/img/oldmission.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

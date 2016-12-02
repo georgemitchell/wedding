@@ -32,7 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-MAINTENANCE_MODE = True
+MAINTENANCE_MODE = env.bool('MAINTENANCE_MODE', default=False)
 
 # Application definition
 

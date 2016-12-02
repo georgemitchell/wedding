@@ -2,3 +2,5 @@
 django==1.8
 django-environ==0.3.0
 django-maintenancemode==0.11.2
+psycopg2==2.6.1
+gunicorn==19.4.5

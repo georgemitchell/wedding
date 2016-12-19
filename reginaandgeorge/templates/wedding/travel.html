@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block extra_css %}
+<link type="text/css" href="/static/css/jquery.countdown.css" rel="stylesheet">
+{% endblock %}
+{% block title_suffix %} - Destination Info{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="travel"%}
+{% endblock %}
+{% block content %}
+
+<div class="pt-page pt-page-5 pt-page-current">
+      <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-travel"></div>
+        <div class="page-scroll">
+          <div class="bg-main-image-overlay-2-gallery">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Destination Info<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="col-md-12 about-the-people">
+                  <p class="col-md-6 col-md-offset-3 col-xs-12">Cited as one of the <a href="http://www.cntraveler.com/galleries/2016-01-06/the-most-beautiful-towns-in-america/14">most beautiful towns in America</a>, Traverse City has turned into a major wedding destination in the last decade. In fact, close to 80% of the weddings held at our wedding venue are of couples from out of state! We couldn't believe how many venues were booking more than a year in advance, and we were fortunate to secure our date of July 15th. What this means for guests is that you will want to <b>book early!</b> Our wedding is the week after Cherry Festival so you shouldn't have to contend with the big crowds; that being said, July is prime time for Traverse City, so rooms and airlines will book fast. Based on our research, you will be able to secure a better deal if you book well in advance.  If you will be flying, the closest airport is Traverse City (TVC), but there are other options (listed below.)  If you are coming from out of town, there are options to stay in either 
+                  <a href="/wedding/traverse_city">Traverse City</a>, <a href="/wedding/leelanau">The Leelanau Peninsula</a>, or <a href="/wedding/old_mission">Old Mission</a></p>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn">
+                      <div class="the-couple groom-color text-center">
+                        <div class="the-couple-title">
+                          <p><span>TVC</span></p>
+                        </div>
+                        <div class="the-couple-img">
+                          <div class="person-image">
+                            <img src="/static/img/tvc.jpg" alt="Cherry Capitol Airport" class="img-circle" />
+                            <div class="the-couple-img-hover">
+                              <div class="social text-center">
+                                <a class="fb-color" href="http://www.tvcairport.com/" target="_blank">&nbsp;</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="the-couple-data">
+                          <p>"Cherry Capitol Airport"</p>
+                          <p>Traverse City, MI</p>
+                          <p class="about-the-couple">
+                            Traverse City Airport is by far the most conveniently located, just minutes away from downtown Traverse City. It has a total of three gates and it's super easy to fly in and out. That said, it can be a bit more expensive to fly here. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn">
+                      <div class="the-couple bride-color text-center">
+                        <div class="the-couple-title">
+                          <p><span>FNT</span></p>
+                        </div>
+                        <div class="the-couple-img">
+                          <div class="person-image">
+                            <img src="/static/img/fnt.jpg" alt="Bishop International Airport" class="img-circle" />
+                            <div class="the-couple-img-hover">
+                              <div class="social text-center">
+                                <a class="fb-color" href="http://www.bishopairport.org/" target="_blank">&nbsp;</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="the-couple-data">
+                          <p>"Bishop International Airport"</p>
+                          <p>Flint, MI</p>
+                          <p class="about-the-couple">Flint is approximately a three-hour drive from Traverse City, and not a particularly scenic one. It's worth checking out the flight prices, though, as you can often find good deals! </p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn">
+                      <div class="the-couple groom-color text-center">
+                        <div class="the-couple-title">
+                          <p><span>DTW</span></p>
+                        </div>
+                        <div class="the-couple-img">
+                          <div class="person-image">
+                            <img src="/static/img/dtw.jpg" alt="Bishop International Airport" class="img-circle" />
+                            <div class="the-couple-img-hover">
+                              <div class="social text-center">
+                                <a class="fb-color" href="http://www.metroairport.com/" target="_blank">&nbsp;</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="the-couple-data">
+                          <p>"Detroit Metro Airport"</p>
+                          <p>Detroit, MI</p>
+                          <p class="about-the-couple">The advantage of Detroit is that it's a direct flight from most major airports. The disadvantage is that it's a solid four-five hour drive to Traverse City. Still, if you plan it right, you can stop and visit a number of unique, Michigan attractions on your drive up north. </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn">
+                      <div class="the-couple bride-color text-center">
+                        <div class="the-couple-title">
+                          <p><span>ORD</span></p>
+                        </div>
+                        <div class="the-couple-img">
+                          <div class="person-image">
+                            <img src="/static/img/fnt.jpg" alt="Bishop International Airport" class="img-circle" />
+                            <div class="the-couple-img-hover">
+                              <div class="social text-center">
+                                <a class="fb-color" href="http://www.bishopairport.org/" target="_blank">&nbsp;</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="the-couple-data">
+                          <p>"Chicago O'Hare"</p>
+                          <p>Chicago, IL</p>
+                          <p class="about-the-couple">Depending on your route, it will take five-six hours to drive to Traverse City. But if you time it right, it could be a lovely, scenic drive. </p>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
+

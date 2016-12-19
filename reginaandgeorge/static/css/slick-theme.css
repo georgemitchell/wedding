@@ -71,10 +71,10 @@
 	left: -25px;
 }
 .slick-next:before {
-	content: url(/static/images/right-arrow.png);
+	content: url(/static/img/right-arrow.png);
 }
 [dir='rtl'] .slick-next:before {
-	content: url(/static/images/right-arrow.png);
+	content: url(/static/img/right-arrow.png);
 }
 /* Dots */
 .slick-dotted.slick-slider {

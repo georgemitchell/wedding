@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title_suffix %} - The Couple{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="couple"%}
+{% endblock %}
+{% block content %}
+       <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-couple"></div>
+        <div class="page-scroll">
+          <div class="bg-main-image-overlay-2">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>The Couple <span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 wow fadeInLeft responsive-margin couple-responsive-padding" data-class="fadeInLeft">
+                    <div class="col-md-12 couple-responsive-padding">
+                      <div class="the-couple groom-color text-center">
+                        <div class="the-couple-title">
+                          <p><span>Groom</span></p>
+                        </div>
+                        <div class="the-couple-img col-md-12 col-md-offset-0 col-xs-12">
+                          <div class="person-image"> <img src="/static/img/george_headshot.jpg" alt="George" class="img-circle">
+                            <div class="the-couple-img-hover">
+                              <div class="social text-center"><a class="fb-color" href="#" target="_blank"><i class="fa fa-facebook"></i></a><a class="tw-color" href="#" target="_blank"><i class="fa fa-twitter"></i></a><a class="gp-color" href="#" target="_blank"><i class="fa fa-google-plus"></i></a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="the-couple-data">
+                          <h3>George Mitchell</h3>
+                          <p>"The Funny One"</p>
+                          <p class="about-the-couple">
+                            When asked to describe George's personality traits, the kinder
+                            members of his family will generally bandy about terms like
+                            "charming", <i>"beloved"</i>, and <i>"fun to be around"</i>. 
+                            But the honest ones are more likely to say <i>"sarcastic"</i>,
+                            </i>"difficult"</i>, and <i>"nowhere near as funny as he thinks"</i>.
+                            George was born in London, grew up in New York, went to school 
+                            in the bay area, and has lived in Los Angeles for longer than he cares
+                            to remember.  He's fully cognizant of the fact that he has hit the
+                            fiancee lottery.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 responsive-margin wow fadeInRight couple-responsive-padding" data-class="fadeInRight">
+                    <div class="col-md-12 couple-responsive-padding">
+                      <div class="the-couple bride-color text-center">
+                        <div class="the-couple-title">
+                          <p><span>Bride</span></p>
+                        </div>
+                        <div class="the-couple-img col-md-12 col-md-offset-0 col-xs-12">
+                          <div class="person-image"> <img src="/static/img/regina_headshot.jpg" alt="Regina" class="img-circle">
+                            <div class="the-couple-img-hover">
+                              <div class="social text-center"><a class="fb-color" href="#" target="_blank"><i class="fa fa-facebook"></i></a><a class="tw-color" href="#" target="_blank"><i class="fa fa-twitter"></i></a><a class="gp-color" href="#" target="_blank"><i class="fa fa-google-plus"></i></a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="the-couple-data">
+                          <h3>Regina Rosi</h3>
+                          <p>"The Hot One"</p>
+                          <p class="about-the-couple">
+                            Regina is everything that is good and pure and wonderful
+                            in the world.  She somehow manages to fit right into Los
+                            Angeles despite her Michigan roots and general eschewing of
+                            the sun (too many wrinkles!)  She is the best thing that's 
+                            ever happened to George.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

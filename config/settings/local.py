@@ -16,7 +16,7 @@ CACHES = {
     'default': env.cache("CACHE_LOCATION", default="filecache://tmp/django_cache")
 }
 
-MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
-INSTALLED_APPS += ('debug_toolbar',)
+#MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+#INSTALLED_APPS += ('debug_toolbar',)
 
 DEBUG=env.bool('DEBUG', default=True)

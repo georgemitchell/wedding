@@ -1,7 +1,68 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.template import Context, loader
 
 # Create your views here.
 from django.views.generic.edit import CreateView, UpdateView
+
+
+def index(request):
+    # Load the template myblog/templates/index.html
+    template = loader.get_template('wedding/home.html')
+    context = Context({})
+
+    return HttpResponse(template.render(context))
+
+
+def couple(request):
+    template = loader.get_template('wedding/couple.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def story(request):
+    template = loader.get_template('wedding/story.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def people(request):
+    template = loader.get_template('wedding/people.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def wedding(request):
+    template = loader.get_template('wedding/wedding.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def gifts(request):
+    template = loader.get_template('wedding/gifts.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def rsvp(request):
+    template = loader.get_template('wedding/rsvp.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def travel(request):
+    template = loader.get_template('wedding/travel.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def traverse_city(request):
+    template = loader.get_template('wedding/traverse_city.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def leelanau(request):
+    template = loader.get_template('wedding/leelanau.html')
+    return HttpResponse(template.render(Context({})))
+
+
+def old_mission(request):
+    template = loader.get_template('wedding/old_mission.html')
+    return HttpResponse(template.render(Context({})))
+
 
 class RSVPCreateView(CreateView):
     form_class = None

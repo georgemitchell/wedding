@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block extra_css %}
+<link type="text/css" href="/static/css/jquery.countdown.css" rel="stylesheet">
+{% endblock %}
+{% block title_suffix %} - Old Mission{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="places"%}
+{% endblock %}
+{% block content %}
+
+<div class="pt-page pt-page-5 pt-page-current">
+      <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-travel"></div>
+        <div class="page-scroll">
+          <div class="bg-main-image-overlay-2-gallery">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Old Mission<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="col-md-12 location-content">
+                  <p>
+                    Old Mission has become a destination for couples seeking a romantic getaway. Unfortunately, this means no children in most places. If, however, you are sans children or planning to leave the kids at home, Old Mission will be the perfect place to stay. 
+                  </p>
+                  </div>
+                </div>
+                <h4 style="color:#000;text-align: center;">Bed &amp; Breakfasts</h4>
+                <div class="container">
+                    <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 responsive-margin text-center wow fadeInLeft padding-left-right-zero" data-class="fadeInLeft">
+                      <div class="white-box ceremony-detail">
+                        <h5>Grey Hare Inn
+                        </h5>
+                        <div class="timeline-img"> 
+                          <img class="img-responsive" src="/static/img/greyhare.jpg" alt="Grey Hare Inn" />
+                        </div>
+                        <a href="http://www.greyhareinn.com/">Website Link</a>
+                          <p>A charming vineyard bed and breakfast. There are only three rooms available, and they allow children provided that the other guests say it's ok. Could be an option for a family group that wants to occupy all three rooms. 
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 responsive-margin text-center wow fadeInRight padding-left-right-zero" data-class="fadeInRight">
+                      <div class="white-box ceremony-detail">
+                        <h5>The Inn at Chateau Grand Traverse
+                        </h5>
+                        <div class="timeline-img"> 
+                          <img class="img-responsive" src="/static/img/chateaugc.jpg" alt="Inn at Chateau Grand Traverse" />
+                        </div>
+                        <a href="https://cgtwines.com/the-inn/">Website Link</a>
+                          <p>With six private and secluded rooms with views of the lake and vineyard, this is where I would want to stay! Each room receives a bottle of wine at night to be enjoyed on the private balcony, and all food is prepared by an in-house chef. Rooms are reasonably priced, especially given the location and amenities.
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 responsive-margin text-center wow fadeInLeft padding-left-right-zero" data-class="fadeInLeft">
+                      <div class="white-box ceremony-detail">
+                        <h5>Old Mission Inn 
+                        </h5>
+                        <div class="timeline-img"> 
+                          <img class="img-responsive" src="/static/img/oldmissioninn.jpeg" alt="Old Mission Inn" />
+                        </div>
+                        <a href="https://www.oldmissioninn.com/">Website Link</a>
+                          <p>A historic inn just minutes away from my parents' house and close to a number of restaurants and wineries. They no longer allow children under 18, but it's a lovely place for couples. 
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 responsive-margin text-center wow fadeInRight padding-left-right-zero" data-class="fadeInRight">
+                      <div class="white-box ceremony-detail">
+                        <h5>Chateau Chantel
+                        </h5>
+                        <div class="timeline-img"> 
+                          <img class="img-responsive" src="/static/img/cc.jpg" alt="Chateau Chantel" />
+                        </div>
+                        <a href="http://www.chateauchantal.com/">Website Link</a>
+                          <p> George's mother is staying here, but there are very few rooms available. That being said, this is our favorite place to gather for wine tasting and to enjoy the gorgeous views; it would be a fun place to go with friends and family during the wedding weekend. 
+                          </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

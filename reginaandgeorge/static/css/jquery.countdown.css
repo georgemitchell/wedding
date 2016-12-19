@@ -1,4 +1,4 @@
-ul#example {
+ul#countdown {
 	list-style: none;
 	padding: 18px 0px;
 	display: block;
@@ -7,27 +7,27 @@ ul#example {
 	border-radius: 139px;
 	margin-bottom: 20px;
 }
-ul#example h2 {
+ul#countdown h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 100;
 	margin: 0px;
 	font-size: 60px;
 }
-ul#example li {
+ul#countdown li {
 	display: inline-block;
 	padding: 0px 48px;
 }
-ul#example li span {
+ul#countdown li span {
 	font-size: 80px;
 	font-weight: 300;
 	line-height: 80px;
 }
-ul#example li.seperator {
+ul#countdown li.seperator {
 	font-size: 80px;
 	line-height: 70px;
 	vertical-align: top;
 }
-ul#example li p {
+ul#countdown li p {
 	margin-bottom: 0px;
 	font-weight: 300;
 }
@@ -36,21 +36,21 @@ ul#example li p {
 	display: inline-block;
 }
  @media screen and (max-width: 1600px) {
-ul#example h2 {
+ul#countdown h2 {
 	font-size: 45px;
 }
 }
  @media screen and (max-width: 1152px) {
-ul#example li {
+ul#countdown li {
 	display: inline-block;
 	padding: 0px 43px;
 }
 }
  @media screen and (max-width: 1024px) {
-ul#example li {
+ul#countdown li {
 	padding: 0px 40px;
 }
-ul#example h2 {
+ul#countdown h2 {
 	font-size: 41px;
 }
 }
@@ -66,7 +66,7 @@ ul#example h2 {
 }
 }
  @media screen and (max-width: 768px) {
-ul#example {
+ul#countdown {
 	margin-bottom: 23px;
 }
 }
@@ -87,10 +87,10 @@ ul#example {
 .countdown-container {
 	top: 52px;
 }
-ul#example li {
+ul#countdown li {
 	padding: 0px 20px;
 }
-ul#example h2 {
+ul#countdown h2 {
 	font-size: 35px;
 }
 .the-couple-img-s2-hover {
@@ -114,10 +114,10 @@ ul#example h2 {
 .countdown-container {
 	top: 52px;
 }
-ul#example li {
+ul#countdown li {
 	padding: 0px 20px;
 }
-ul#example h2 {
+ul#countdown h2 {
 	font-size: 35px;
 }
 .the-couple-img-s2-hover {
@@ -138,13 +138,13 @@ ul#example h2 {
 .countdown-container {
 	top: 39px;
 }
-ul#example li {
+ul#countdown li {
 	padding: 0px 12px;
 }
-ul#example h2 {
+ul#countdown h2 {
 	font-size: 25px;
 }
-ul#example li p {
+ul#countdown li p {
 	font-size: 14px;
 }
 }
@@ -165,13 +165,13 @@ ul#example li p {
 .countdown-container {
 	top: 86px;
 }
-ul#example li {
+ul#countdown li {
 	padding: 0px 12px;
 }
-ul#example h2 {
+ul#countdown h2 {
 	font-size: 25px;
 }
-ul#example li p {
+ul#countdown li p {
 	font-size: 14px;
 }
 }
@@ -246,16 +246,16 @@ ul#example li p {
 .text {
 	top: 111%;
 }
-ul#example li {
+ul#countdown li {
 	padding: 0px 13px;
 }
-ul#example h2 {
+ul#countdown h2 {
 	font-size: 21px;
 }
-ul#example li p {
+ul#countdown li p {
 	font-size: 11px;
 }
-ul#example {
+ul#countdown {
 	padding: 12px 0px;
 }
 }
@@ -268,7 +268,7 @@ ul#example {
 	height: 65px;
 	width: 65px;
 }
-ul#example li {
+ul#countdown li {
 	padding: 0px 10px;
 }
 .text {

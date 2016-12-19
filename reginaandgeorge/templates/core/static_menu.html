@@ -1,0 +1,135 @@
+<div class="resonsive-tab">
+  <div class="header">
+    <div class="container">
+      <div class="logo-responsive pull-left">
+        <a href="/">
+          <img class="img-responsive" src="/static/img/rg_logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="hamburger pull-right">
+        <img src="/static/img/hamburger_menu-alt.png" alt="Navicon">
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<div id="dl-menu" class="section1 navbar navbar-default navbar-fixed-top">
+  <div class="vertical-menu">
+    <div class="logo-s2"> <a href="/" data-menu="index"> <img src="/static/img/rg_logo.png" alt="logo"> </a> </div>
+    <div class="ver-menu">
+      <ul class="dl-menu nav navbar-nav menubar-s2 horizontal_iconmenu" style="position: relative;">
+        <li data-animation="1" class="hvr-overline-from-center{% if active_menu == "home" %} hover_active{% endif %}">
+          <a href="/wedding/" data-menu="index">
+            {% include "svg_icons/home.html" with svg_icon_layer_id="Layer_1" %}
+            <div class="clearfix"></div>
+            Home
+          </a>
+        </li>
+        <li data-animation="2" class="hvr-overline-from-center{% if active_menu == "couple" %} hover_active{% endif %}">
+          <a href="/wedding/couple/">
+            {% include "svg_icons/couple.html" with svg_icon_layer_id="Layer_2" %}
+            <div class="clearfix"></div>
+            Couple
+          </a>
+        </li>
+        <li data-animation="3" class="hvr-overline-from-center{% if active_menu == "story" %} hover_active{% endif %}">
+          <a href="/wedding/story/" data-menu="projects">
+            {% include "svg_icons/heart.html" with svg_icon_layer_id="Layer_3" %}
+            <div class="clearfix"></div>
+            Story
+          </a>
+        </li>
+        <li data-animation="4" class="hvr-overline-from-center{% if active_menu == "people" %} hover_active{% endif %}">
+          <a href="/wedding/people/" data-menu="projects">
+            {% include "svg_icons/people.html" with svg_icon_layer_id="Layer_4" %}
+            <div class="clearfix"></div>
+            People
+          </a>
+        </li>
+        <li data-animation="5" class="hvr-overline-from-center{% if active_menu == "wedding" %} hover_active{% endif %}">
+          <a href="/wedding/wedding/" data-menu="projects">
+            {% include "svg_icons/star.html" with svg_icon_layer_id="Layer_5" %}
+            <div class="clearfix"></div>
+            Wedding
+          </a>
+        </li>
+        <li data-animation="6" class="hvr-overline-from-center{% if active_menu == "gifts" %} hover_active{% endif %}">
+          <a href="/wedding/gifts/" data-menu="projects"> 
+            {% include "svg_icons/present.html" with svg_icon_layer_id="Layer_6" %}
+            <div class="clearfix"></div>
+            Gifts
+          </a>
+        </li>
+        <li data-animation="7" class="hvr-overline-from-center{% if active_menu == "rsvp" %} hover_active{% endif %}">
+          <a href="/wedding/rsvp/" data-menu="projects"> 
+            {% include "svg_icons/pencil.html" with svg_icon_layer_id="Layer_7" %}
+            <div class="clearfix"></div>
+            RSVP 
+          </a>
+        </li>
+        <li data-animation="8" class="hvr-overline-from-center{% if active_menu == "travel" %} hover_active{% endif %}">
+          <a href="/wedding/travel/" data-menu="projects"> 
+            {% include "svg_icons/tickets.html" with svg_icon_layer_id="Layer_8" %}
+            <div class="clearfix"></div>
+            Travel
+          </a>
+        </li>
+        <li data-animation="8" class="hvr-overline-from-center1 other-menu icon-visibility-other{% if active_menu == "places" %} hover_active{% endif %}">
+          <a href="" class="other-parent">
+            {% include "svg_icons/star.html" with svg_icon_layer_id="Layer_9" %}
+            <div class="clearfix"></div>
+            Places
+          </a>
+          <!-- hoer menu for web starts from here-->
+          <ul class="hover-menu">
+            <li data-animation="9" class="hvr-overline-from-center1">
+              <a href="/wedding/traverse_city/" data-menu="projects">
+                {% include "svg_icons/check.html" with svg_icon_layer_id="Layer_10" %}
+                <div class="clearfix"></div>
+                Traverse City
+              </a>
+            </li>
+            <li data-animation="10" class="hvr-overline-from-center1">
+              <a href="/wedding/leelanau/" data-menu="projects">
+                {% include "svg_icons/check.html" with svg_icon_layer_id="Layer_11" %}
+                <div class="clearfix"></div>
+                The Leelanau Peninsula
+              </a>
+            </li>
+            <li data-animation="11" class="hvr-overline-from-center1">
+              <a href="/wedding/old_mission/" data-menu="projects">
+                {% include "svg_icons/check.html" with svg_icon_layer_id="Layer_12" %}
+                <div class="clearfix"></div>
+                The Old Mission Peninsula
+              </a>
+            </li>
+          </ul>
+          <!-- hover menu for web ends here--> 
+        </li>
+        <!-- menu for mobile devices starts from here-->
+        <li data-animation="9" class="hvr-overline-from-center icon-visibility">
+          <a href="#0" data-menu="projects">
+            {% include "svg_icons/check.html" with svg_icon_layer_id="Layer_14" %}
+            <div class="clearfix"></div>
+            Traverse City
+          </a>
+        </li>
+        <li data-animation="10" class="hvr-overline-from-center icon-visibility">
+          <a href="#0" data-menu="projects"> 
+            {% include "svg_icons/check.html" with svg_icon_layer_id="Layer_15" %}
+            <div class="clearfix"></div>
+            The Leelanau Peninsula
+          </a>
+        </li>
+        <li data-animation="11" class="hvr-overline-from-center icon-visibility">
+          <a href="#0" data-menu="projects">
+            {% include "svg_icons/check.html" with svg_icon_layer_id="Layer_16" %}
+            <div class="clearfix"></div>
+            The Old Mission Peninsula
+            </a>
+        </li>
+        <!-- menu for mobile devices ends from here-->
+      </ul>
+    </div>
+  </div>
+</div>

@@ -237,7 +237,7 @@ input, textarea {
 	top: 0px;
 }
 .bg-loveline {
-	background: url(/static/img/loveline-back.jpg) no-repeat center center;
+	background: url(/static/img/bg-sunset.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -251,7 +251,7 @@ input, textarea {
 	background-size: cover;
 }
 .bg-wedding {
-	background: url(/static/img/wedding-back.jpg) no-repeat center center;
+	background: url(/static/img/bg-kiss.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -285,6 +285,23 @@ input, textarea {
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+.bg-travel {
+	background: url(/static/img/bg-cherries.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.bg-leelanau {
+	background: url(/static/img/bg-leelanau.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 .home-overflow {
 	overflow: hidden;
 }
@@ -817,6 +834,12 @@ input, textarea {
 }
 .white-box {
 	background-color: #fff;
+}
+
+.location-content {
+	background-color: #fff;
+	color: #000;
+	padding: 20px 0px 20px 20px;
 }
 .ceremony-detail h5 {
 	font-family: 'Roboto', sans-serif;

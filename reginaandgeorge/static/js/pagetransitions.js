@@ -31,7 +31,7 @@ $pages.eq(current).find(".page-top").removeClass("display_none");
 		$pages.eq(current).find(".container-fluid").removeClass("display_none");
         $pages.eq(current).addClass('pt-page-current');
 
-        $('#dl-menu div').dlmenu({
+        /*$('#dl-menu div').dlmenu({
             animationClasses: { in: 'dl-animate-in-2', out: 'dl-animate-out-2' },
             onLinkClick: function (el, ev) {
                 ev.preventDefault();
@@ -50,7 +50,7 @@ $pages.eq(current).find(".page-top").removeClass("display_none");
                 ev.preventDefault();
                 nextPage(el.data('animation') - 1);
             }
-        });
+        });*/
 
 
 
@@ -115,7 +115,6 @@ $pages.eq(current).find(".page-top").removeClass("display_none");
     }
 
     init();
-
     return {
         init: init,
         nextPage: nextPage,

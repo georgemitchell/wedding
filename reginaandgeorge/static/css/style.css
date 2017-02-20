@@ -1942,7 +1942,6 @@ h2.resp-accordion:first-child {
 	-moz-transform: scale(1.8, 1.8);
 	-ms-transform: scale(1.8, 1.8);
 	-o-transform: scale(1.8, 1.8);
-	;
 	-webkit-transform: scale(1.8, 1.8);
 	border-radius: 0px !important;
 }
@@ -1998,7 +1997,6 @@ h2.resp-accordion {
 }
 .resp-tabs-list h2.resp-accordion:first-child {
 	border-top: none;
-	;
 }
 h2.resp-accordion {
 	font-size: 16px;

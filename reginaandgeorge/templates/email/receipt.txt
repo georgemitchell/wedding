@@ -1,0 +1,11 @@
+We're so excited that you'll be joining us!  See you in Michigan:
+
+{{ guests|length }} guest(s) total</b>
+{% for guest in guests %}
+    {{ guest.name }} [ {{ guest.get_meal_display }} ]
+{% endfor %}
+
+Thanks!
+
+Love,
+Regina & George

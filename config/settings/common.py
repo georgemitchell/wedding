@@ -21,6 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
 APPS_DIR = ROOT_DIR.path('reginaandgeorge')
 
+DOMAIN = "reginaandgeorge.com"
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -43,7 +45,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'maintenancemode'
+    'maintenancemode',
+    'rsvp',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -124,3 +127,10 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'reginaandgeorgemitchell@gmail.com'
+EMAIL_HOST_PASSWORD = env.str("GMAIL_PASSWORD")
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = 'reginaandgeorgemitchell@gmail.com'
+SERVER_EMAIL = 'reginaandgeorgemitchell@gmail.com'

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title_suffix %} - RSVP{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="rsvp"%}
+{% endblock %}
+{% block content %}
+
+<div class="pt-page pt-page-8 pt-page-current">
+      <div class="container-fluid bg-main-image">
+        <div class="blur-img bg-rsvp"></div>
+        <div class="page-fixed">
+          <div class="bg-main-image-overlay-fixed ">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Thank You!<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="rsvp">
+                  <div class="rsvp-form white-box wow fadeInUp col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12" data-class="fadeInUp">
+                    {% if not_attending %}
+                      <p> We're sorry that you won't be able to make it.  We hope to connect with you soon! <p>
+                      <p>Love, Regina &amp; George</p>
+                    {% else %}
+                      <p> Woo-hoo!  Can't wait to celebrate with you!  Here's the information we have for you:</p>
+                      <p><b>{{ guests|length }} guest(s) total</b></p>
+                      {% for guest in guests %}
+                      <p><span>{{ guest.name }}</span> [ {{ guest.get_meal_display }} ]</p>
+                      {% endfor %}
+                      <p>Contact Number <br /><b>{{ rsvp.telephone }}</b></p>
+                      <p><i>Where we're staying for this shindig</i> <br />{{ rsvp.location|linebreaks }}</p>
+                      
+                    {% endif %}
+                    <p> <a href="/wedding/rsvp/details/{{ rsvp.id }}/{{ access_code.access_code }}/">Make Changes</a> | 
+                      <a href="/wedding/rsvp/send_confirmation/{{ rsvp.id }}/{{ access_code.access_code }}/">Email Confirmation</a></p>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+  <script type="text/javascript" src="/static/js/jquery.validate.min.js"></script> 
+  <script type="text/javascript" src="/static/js/rsvp.js"></script>
+
+{% endblock %}
+
+

@@ -20,3 +20,5 @@ CACHES = {
 #INSTALLED_APPS += ('debug_toolbar',)
 
 DEBUG=env.bool('DEBUG', default=True)
+
+DOMAIN = "127.0.0.1:8010"

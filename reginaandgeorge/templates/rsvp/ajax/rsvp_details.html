@@ -1,0 +1,101 @@
+<form class="form floating-label text-left form-validate" action="/wedding/rsvp/details/1/{{ access_code.access_code }}/" method="post" id="email_check">
+{% csrf_token %}
+<div class="form-group">
+  <input type="text" class="form-control" id="{{ form.telephone.id_for_label }}" name="{{ form.telephone.html_name }}" value="{{ form.telephone.value }}" data-rule-number="true" required />
+  {% if form.telephone.errors %}
+        {% for error in form.telephone.errors %}
+            {{ error|escape }}
+        {% endfor %}
+    {% endif %}
+  <label for="{{ form.telephone.id_for_label }}">Contact Number</label>
+</div>
+
+
+<div class="form-group">
+  <select id="attending" name="attending" class="form-control select2-list dirty" required>
+    <option value='1'{% if not_attending == None %} selected{% endif %}>Yes, I wouldn't miss it for the world!</option>
+    <option value='0'{% if not_attending %} selected{% endif %}>No, and I'm very sad about it :(</option>
+  </select>
+  <label for="attending">I Will Be Attending</label>
+</div>
+
+<div id="attending_block"{% if not_attending %} style="display:none;"{% endif %}>
+  <div class="form-group">
+    <textarea class="form-control" id="{{ form.location.id_for_label }}" name="{{ form.location.html_name }}">{{ form.location.value }}</textarea>
+    {% if form.location.errors %}
+        {% for error in form.location.errors %}
+            {{ error|escape }}
+        {% endfor %}
+    {% endif %}
+    <label>Where We're Staying For This Shindig </label>
+  </div>
+  {{ guest_formset.management_form }}
+  {% for subform in guest_formset %}
+      <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" id="{{ subform.name.id_for_label }}" name="{{ subform.name.html_name }}" value="{{ subform.name.value }}"{% if forloop.first %} required{% endif %} />
+          {% if subform.name.errors %}
+        {% for error in subform.name.errors %}
+            {{ error|escape }}
+        {% endfor %}
+    {% endif %}
+          <label for="{{ subform.name.id_for_label }}">Guest Name</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <select id="{{ subform.meal.id_for_label}}" name="{{ subform.meal.html_name }}" class="form-control select2-list dirty"{% if forloop.first %} required{% endif %}>
+            <option value="">Select Meal</option>
+            {% for value, display in meal_choices %}
+              <option value="{{ value }}"{% if value == subform.meal.value %} selected{% endif %}>{{ display }}</option>
+            {% endfor %}
+          </select>
+          {% if form.meal.errors %}
+        {% for error in form.meal.errors %}
+            {{ error|escape }}
+        {% endfor %}
+    {% endif %}
+          <label for="{{ subform.meal.id_for_label}}">Meal Choice</label>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+</div>
+<div id="not_attending_block"{% if not_attending == None %} style="display:none;"{% endif %}>
+  <div class="form-group">
+    <input type="text" class="form-control" id="{{ not_attending_form.name.id_for_label }}" name="{{ not_attending_form.name.html_name }}" required data-rule-minlength="2" />
+    {% if not_attending_form.name.errors %}
+        {% for error in not_attending_form.name.errors %}
+            {{ error|escape }}
+        {% endfor %}
+    {% endif %}
+    <label for="{{ not_attending_form.name.id_for_label }}">Name</label>
+  </div>
+</div>
+
+<div class="rsvp-button text-center">
+    <button type="submit" class="hvr-sweep-to-right">SAVE</button>
+  </div>
+</form>
+
+{% if ajax %}
+
+<script type="text/javascript">
+  $(document).on('ready', function () {
+      'use strict';
+      $('#attending').on('change', function () {
+          if(this.value == 0) {
+            $("#attending_block").css("display", "none");
+            $("#not_attending_block").css("display","block");
+          } else {
+            $("#not_attending_block").css("display","none");
+            $("#attending_block").css("display", "block");  
+          }
+          
+      });
+    });
+</script>
+
+{% endif %}
+

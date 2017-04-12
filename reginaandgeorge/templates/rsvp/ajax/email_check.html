@@ -1,0 +1,16 @@
+<div id="email_check_div">
+<form class="form floating-label text-left form-validate" action="" method="get" id="email_check_form">
+{% csrf_token %}
+<input type="hidden" id="is_ajax" name="is_ajax" value="true" />
+<input type="hidden" id="form_type" name="form_type" value="email_check" />
+  <div class="form-group">
+	  <input type="email" class="form-control" id="email" name="email" required />
+	  <label for="email">Email Address</label>
+	</div>
+  <div class="rsvp-button text-center">
+    <button type="submit" class="hvr-sweep-to-right">CONTINUE</button>
+    
+  </div>
+</form>
+</div>
+<div id="loading_div" style="display:none; text-align: center"><img src="/static/img/ajax-loader.gif" alt="Loader"></div>

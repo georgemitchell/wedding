@@ -1,6 +1,6 @@
 import views
 
-from django.conf.urls import url
+from django.conf.urls import include, url
 
 urlpatterns = [
     url(r'^$', views.index, name="home"),
@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'^people', views.people, name="people"),
     url(r'^wedding', views.wedding, name="wedding"),
     url(r'^gifts', views.gifts, name="gifts"),
-    url(r'^rsvp', views.rsvp, name="rsvp"),
+    url(r'^rsvp/', include('rsvp.urls')),
     url(r'^travel', views.travel, name="travel"),
     url(r'^traverse_city', views.traverse_city, name="traverse_city"),
     url(r'^leelanau', views.leelanau, name="leelanau"),

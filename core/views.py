@@ -39,11 +39,6 @@ def gifts(request):
     return HttpResponse(template.render(Context({})))
 
 
-def rsvp(request):
-    template = loader.get_template('wedding/rsvp.html')
-    return HttpResponse(template.render(Context({})))
-
-
 def travel(request):
     template = loader.get_template('wedding/travel.html')
     return HttpResponse(template.render(Context({})))

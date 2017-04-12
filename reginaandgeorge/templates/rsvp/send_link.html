@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title_suffix %} - RSVP{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="rsvp"%}
+{% endblock %}
+{% block content %}
+
+<div class="pt-page pt-page-8 pt-page-current">
+      <div class="container-fluid bg-main-image">
+        <div class="blur-img bg-rsvp"></div>
+        <div class="page-fixed">
+          <div class="bg-main-image-overlay-fixed ">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Rsvp<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="rsvp">
+                    <div class="rsvp-form white-box wow fadeInUp col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12" data-class="fadeInUp">
+                    <div id="rsvp_content">
+                      {% include "rsvp/ajax/access_code.html" %}
+                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
+

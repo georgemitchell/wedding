@@ -243,6 +243,7 @@ def get_access_code(rsvp):
 def email_check(request):
     email = request.GET.get("email", None)
     if email:
+        email = email.lower()
         try:
             rsvp = RSVP.objects.get(email=email)
         except RSVP.DoesNotExist:
@@ -290,7 +291,7 @@ def send_link(request, rsvp_id):
             "access_code": access_code,
             "is_new": is_new
         }
-    template = loader.get_template('rsvp/ajax/access_code.html')
+    template = loader.get_template('rsvp/send_link.html')
     return HttpResponse(template.render(Context(c)))
 
 

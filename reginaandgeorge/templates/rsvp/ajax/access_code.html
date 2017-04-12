@@ -3,7 +3,6 @@
 <p> A super secret link has been emailed to: {{ rsvp.email }}</p>
 <p> "I didn't receive it!" you say?  Well, give it a minute... still waiting?  Well then... <a href="/wedding/rsvp/send_link/{{ rsvp.id }}/">email it again!</a></p>
 {% else %}
+<p> Please click on the link in the email that we sent you on: <span>{{ access_code.created }}</span></p>
 <p> "I deleted/lost/can't find that email!" you say?  <a href="/wedding/rsvp/send_link/{{ rsvp.id }}/">Generate a new one!</a></p>
 {% endif %}
-
-<p> Please click on the link in the email to access your RSVP.</p>

@@ -1,4 +1,4 @@
-<form class="form floating-label text-left form-validate" action="/wedding/rsvp/details/1/{{ access_code.access_code }}/" method="post" id="email_check">
+<form class="form floating-label text-left form-validate" action="/wedding/rsvp/details/{{ rsvp.id }}/{{ access_code.access_code }}/" method="post" id="email_check">
 {% csrf_token %}
 <div class="form-group">
   <input type="text" class="form-control" id="{{ form.telephone.id_for_label }}" name="{{ form.telephone.html_name }}" value="{{ form.telephone.value }}" data-rule-number="true" required />

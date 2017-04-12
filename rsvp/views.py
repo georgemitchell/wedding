@@ -92,6 +92,7 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
                 for g in guests]
 
             context = self.get_context_data(form=rsvp_form)
+            context["rsvp"] = rsvp
             context["access_code"] = working
             context["not_attending_form"] = not_attending_form
             context["guest_formset"] = self.GuestFormSet(initial=guest_data)
@@ -150,8 +151,8 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
                     self.template_name = "rsvp/confirmation.html"
                     return self.render_to_response(context)
                 else:
-                    print "made it here"
                     context = self.get_context_data(form=rsvp_form)
+                    context["rsvp"] = rsvp
                     context["not_attending_form"] = NotAttendingForm()
                     context["guest_formset"] = guest_formset
                     context["meal_choices"] = MEALS
@@ -176,6 +177,7 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
                         for g in guests]
 
                     context = self.get_context_data(form=rsvp_form)
+                    context["rsvp"] = rsvp
                     context["not_attending_form"] = not_attending_form
                     context["guest_formset"] = self.GuestFormSet(initial=guest_data)
                     context["meal_choices"] = MEALS

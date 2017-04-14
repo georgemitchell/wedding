@@ -18,7 +18,7 @@ class RSVPForm(ModelForm):
 class GuestForm(ModelForm):
     class Meta:
         model = Guest
-        fields = ["name", "meal"]
+        fields = ["name", "meal", "notes"]
 
 
 class NotAttendingForm(ModelForm):

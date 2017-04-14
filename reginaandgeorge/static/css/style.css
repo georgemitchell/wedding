@@ -2663,4 +2663,10 @@ ul.timeline > li > .timeline-badge {
 	top: 41%;
 	left: 42%;
 }
+
+.divider {
+    border-bottom: 1px solid #ccc;
+    height: 5px;
+    margin-bottom: 4px;
+}
 }

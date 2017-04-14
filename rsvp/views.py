@@ -88,7 +88,7 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
                 not_attending_form = NotAttendingForm(prefix='na')
 
             guests = self.get_guest_data(rsvp)
-            guest_data = [{'name': g.name, 'meal': g.meal}
+            guest_data = [{'name': g.name, 'meal': g.meal, 'notes': g.notes}
                 for g in guests]
 
             context = self.get_context_data(form=rsvp_form)
@@ -139,7 +139,8 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
                         if guest_form.is_valid():
                             name = guest_form.cleaned_data.get('name')
                             meal = guest_form.cleaned_data.get('meal')
-                            guest = Guest(rsvp=rsvp, name=name, meal=meal)
+                            notes = guest_form.cleaned_data.get('notes')
+                            guest = Guest(rsvp=rsvp, name=name, meal=meal, notes=notes)
                             guest.save()
                             guests.append(guest)
                     context = self.get_context_data()

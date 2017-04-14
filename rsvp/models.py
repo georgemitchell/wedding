@@ -36,6 +36,7 @@ class Guest(models.Model):
     rsvp = models.ForeignKey(RSVP)
     name = models.CharField(max_length=128)
     meal = models.SmallIntegerField(choices=MEALS)
+    notes = models.TextField(blank=True)
 
 
 class NotAttending(models.Model):

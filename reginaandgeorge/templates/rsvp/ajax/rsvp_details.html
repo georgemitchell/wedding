@@ -38,6 +38,7 @@
 
   {{ guest_formset.management_form }}
   {% for subform in guest_formset %}
+    <div style="color:#000; padding-top:10px; padding-bottom: 5px"><span>Guest {{ forloop.counter }}</span></div>
       <div class="row">
       <div class="col-md-6">
         <div class="form-group">
@@ -68,6 +69,15 @@
         </div>
       </div>
     </div>
+    <div class="form-group">
+    <textarea class="form-control" id="{{ subform.notes.id_for_label }}" name="{{ subform.notes.html_name }}">{{ subform.notes.value }}</textarea>
+    {% if subform.notes.errors %}
+        {% for error in subform.notes.errors %}
+            {{ error|escape }}
+        {% endfor %}
+    {% endif %}
+    <label>Any dietary restrictions we should know about?</label>
+  </div>
 {% endfor %}
 </div>
 <div id="not_attending_block"{% if not_attending == None %} style="display:none;"{% endif %}>
@@ -81,7 +91,7 @@
     <label for="{{ not_attending_form.name.id_for_label }}">Name</label>
   </div>
   <div class="form-group">
-    <textarea class="form-control" id="{{ not_attending_form.message.id_for_label }}" name="{{ not_attending_form.message.html_name }}">{{ form.message.value }}</textarea>
+    <textarea class="form-control" id="{{ not_attending_form.message.id_for_label }}" name="{{ not_attending_form.message.html_name }}">{{ not_attending_form.message.value }}</textarea>
     {% if not_attending_form.message.errors %}
         {% for error in not_attending_form.message.errors %}
             {{ error|escape }}

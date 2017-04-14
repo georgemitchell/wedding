@@ -133,8 +133,6 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
                 guest_formset = self.GuestFormSet(request.POST)
 
                 if rsvp_form.is_valid() and guest_formset[0].is_valid():
-                    print rsvp_form.cleaned_data["message"]
-                    print rsvp_form.cleaned_data["telephone"]
                     rsvp_form.save()
                     guests = []
                     for guest_form in guest_formset:

@@ -83,9 +83,9 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
 
             try:
                 not_attending = NotAttending.objects.get(rsvp=RSVP)
-                not_attending_form = NotAttendingForm(instance=not_attending)
+                not_attending_form = NotAttendingForm(prefix='na', instance=not_attending)
             except NotAttending.DoesNotExist:
-                not_attending_form = NotAttendingForm()
+                not_attending_form = NotAttendingForm(prefix='na')
 
             guests = self.get_guest_data(rsvp)
             guest_data = [{'name': g.name, 'meal': g.meal}
@@ -131,10 +131,10 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
             
             if int(request.POST["attending"]) == 1:
                 guest_formset = self.GuestFormSet(request.POST)
-                for guest_form in guest_formset:
-                    print guest_form.is_valid()
 
                 if rsvp_form.is_valid() and guest_formset[0].is_valid():
+                    print rsvp_form.cleaned_data["message"]
+                    print rsvp_form.cleaned_data["telephone"]
                     rsvp_form.save()
                     guests = []
                     for guest_form in guest_formset:
@@ -153,14 +153,14 @@ class RSVPDetails(View, TemplateResponseMixin, ContextMixin, AccessCodeMixin):
                 else:
                     context = self.get_context_data(form=rsvp_form)
                     context["rsvp"] = rsvp
-                    context["not_attending_form"] = NotAttendingForm()
+                    context["not_attending_form"] = NotAttendingForm(prefix='na')
                     context["guest_formset"] = guest_formset
                     context["meal_choices"] = MEALS
                     context["ajax"] = self.is_ajax
                     return self.render_to_response(context)
             else:
                 not_attending = NotAttending(rsvp=rsvp)
-                not_attending_form = NotAttendingForm(request.POST, instance=not_attending)
+                not_attending_form = NotAttendingForm(request.POST, prefix='na', instance=not_attending)
                 if rsvp_form.is_valid() and not_attending_form.is_valid():
                     rsvp_form.save()
                     not_attending_form.save()

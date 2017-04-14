@@ -42,4 +42,3 @@ class NotAttending(models.Model):
     rsvp = models.ForeignKey(RSVP)
     name = models.CharField(max_length=128)
     message = models.TextField(blank=True)
-    

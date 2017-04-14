@@ -12,7 +12,7 @@ class EmailCheckForm(ModelForm):
 class RSVPForm(ModelForm):
     class Meta:
         model = RSVP
-        fields = ["telephone", "location"]
+        fields = ["telephone", "location", "message"]
 
 
 class GuestForm(ModelForm):
@@ -24,4 +24,4 @@ class GuestForm(ModelForm):
 class NotAttendingForm(ModelForm):
     class Meta:
         model = NotAttending
-        fields = ["name"]
+        fields = ["name", "message"]

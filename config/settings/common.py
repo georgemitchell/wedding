@@ -71,15 +71,18 @@ TEMPLATES = [
         ],
         'APP_DIRS': True,
         'OPTIONS': {
+            'debug': DEBUG,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'core.context_processors.google_analytics',
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -134,3 +137,6 @@ EMAIL_HOST_PASSWORD = env.str("GMAIL_PASSWORD")
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = 'reginaandgeorgemitchell@gmail.com'
 SERVER_EMAIL = 'reginaandgeorgemitchell@gmail.com'
+
+GOOGLE_ANALYTICS_PROPERTY_ID = env.str("GOOGLE_ANALYTICS_PROPERTY_ID", None)
+

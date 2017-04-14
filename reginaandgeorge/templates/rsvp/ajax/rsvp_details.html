@@ -1,6 +1,23 @@
 <form class="form floating-label text-left form-validate" action="/wedding/rsvp/details/{{ rsvp.id }}/{{ access_code.access_code }}/" method="post" id="email_check">
 {% csrf_token %}
 <div class="form-group">
+  <select id="attending" name="attending" class="form-control select2-list dirty" required>
+    <option value='1'{% if not_attending == None %} selected{% endif %}>Yes, I wouldn't miss it for the world!</option>
+    <option value='0'{% if not_attending %} selected{% endif %}>No, and I'm very sad about it :(</option>
+  </select>
+  <label for="attending">I Will Be Attending</label>
+</div>
+<div id="attending_block"{% if not_attending %} style="display:none;"{% endif %}>
+<div class="form-group">
+    <textarea class="form-control" id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}">{{ form.message.value }}</textarea>
+    {% if form.message.errors %}
+        {% for error in form.message.errors %}
+            {{ error|escape }}
+        {% endfor %}
+    {% endif %}
+    <label>What's that?  You want to leave us a message?</label>
+  </div>
+<div class="form-group">
   <input type="text" class="form-control" id="{{ form.telephone.id_for_label }}" name="{{ form.telephone.html_name }}" value="{{ form.telephone.value }}" required />
   {% if form.telephone.errors %}
         {% for error in form.telephone.errors %}
@@ -9,17 +26,6 @@
     {% endif %}
   <label for="{{ form.telephone.id_for_label }}">Contact Number</label>
 </div>
-
-
-<div class="form-group">
-  <select id="attending" name="attending" class="form-control select2-list dirty" required>
-    <option value='1'{% if not_attending == None %} selected{% endif %}>Yes, I wouldn't miss it for the world!</option>
-    <option value='0'{% if not_attending %} selected{% endif %}>No, and I'm very sad about it :(</option>
-  </select>
-  <label for="attending">I Will Be Attending</label>
-</div>
-
-<div id="attending_block"{% if not_attending %} style="display:none;"{% endif %}>
   <div class="form-group">
     <textarea class="form-control" id="{{ form.location.id_for_label }}" name="{{ form.location.html_name }}">{{ form.location.value }}</textarea>
     {% if form.location.errors %}
@@ -29,6 +35,7 @@
     {% endif %}
     <label>Where We're Staying For This Shindig </label>
   </div>
+
   {{ guest_formset.management_form }}
   {% for subform in guest_formset %}
       <div class="row">
@@ -43,6 +50,7 @@
           <label for="{{ subform.name.id_for_label }}">Guest Name</label>
         </div>
       </div>
+       
       <div class="col-md-6">
         <div class="form-group">
           <select id="{{ subform.meal.id_for_label}}" name="{{ subform.meal.html_name }}" class="form-control select2-list dirty"{% if forloop.first %} required{% endif %}>
@@ -71,6 +79,15 @@
         {% endfor %}
     {% endif %}
     <label for="{{ not_attending_form.name.id_for_label }}">Name</label>
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}">{{ form.message.value }}</textarea>
+    {% if form.message.errors %}
+        {% for error in form.message.errors %}
+            {{ error|escape }}
+        {% endfor %}
+    {% endif %}
+    <label>We're sorry you won't be there! Any words of advice?</label>
   </div>
 </div>
 

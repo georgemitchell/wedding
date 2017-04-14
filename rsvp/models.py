@@ -7,6 +7,7 @@ class RSVP(TimeStampedModel):
     telephone = models.CharField(max_length=16, blank=True)
     num_guests_allowed = models.SmallIntegerField(default=2)
     location = models.TextField(blank=True)
+    message = models.TextField(blank=True)
 
 
 class AccessCode(models.Model):
@@ -40,3 +41,5 @@ class Guest(models.Model):
 class NotAttending(models.Model):
     rsvp = models.ForeignKey(RSVP)
     name = models.CharField(max_length=128)
+    message = models.TextField(blank=True)
+    

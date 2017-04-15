@@ -36,6 +36,25 @@
     <label>Where We're Staying For This Shindig </label>
   </div>
 
+  <div id="rsvp_content" style="padding-top:10px;color:#666">
+  <h3 style="font-size:18pt">Meal Choices</h3>
+    <p>
+      <span>Beef</span><br />
+      Grilled beef filet topped with roasted garlic and herb compound butter
+    </p>
+    <p>
+      <span>Chicken</span><br />
+      Balsamic and herb marinated chicken stuffed with prosciutto, 
+      fresh spinach, and Boursin cheese topped with a white wine-tarragon sauce
+    </p>
+    <p>
+      <span>Vegetarian</span><br />
+      Parmesan polenta cakes with ratatouille
+    </p>
+  </div>
+  <div id="rsvp_content" style="padding-top:10px;color:#666">
+  <h3 style="font-size:18pt">Guests</h3>
+  </div>
   {{ guest_formset.management_form }}
   {% for subform in guest_formset %}
     <div style="color:#000; padding-top:10px; padding-bottom: 5px"><span>Guest {{ forloop.counter }}</span></div>

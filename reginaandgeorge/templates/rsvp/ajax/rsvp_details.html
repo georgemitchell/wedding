@@ -18,7 +18,7 @@
     <label>What's that?  You want to leave us a message?</label>
   </div>
 <div class="form-group">
-  <input type="text" class="form-control" id="{{ form.telephone.id_for_label }}" name="{{ form.telephone.html_name }}" value="{{ form.telephone.value }}" required />
+  <input type="text" class="form-control" id="{{ form.telephone.id_for_label }}" name="{{ form.telephone.html_name }}" value="{{ form.telephone.value }}" data-rule-maxlength="16" required />
   {% if form.telephone.errors %}
         {% for error in form.telephone.errors %}
             {{ error|escape }}

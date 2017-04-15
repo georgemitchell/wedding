@@ -1,5 +1,6 @@
 from django.db import models
 from core.models import TimeStampedModel
+import datetime
 
 
 class RSVP(TimeStampedModel):
@@ -16,6 +17,10 @@ class AccessCode(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     expires = models.DateTimeField()
 
+    def extend(self):
+        expires = datetime.datetime.utcnow() + datetime.timedelta(hours=48)
+        self.expires = expires
+        self.save()
 
 """
 class Meal(models.Model):

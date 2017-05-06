@@ -14,5 +14,10 @@ class GuestAdmin(admin.ModelAdmin):
     pass
 
 
+class NotAttendingAdmin(admin.ModelAdmin):
+    list_display = ('name', 'message', 'rsvp')
+    pass
+
 admin.site.register(RSVP, RSVPAdmin)
 admin.site.register(Guest, GuestAdmin)
+admin.site.register(NotAttending, NotAttendingAdmin)

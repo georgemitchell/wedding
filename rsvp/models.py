@@ -1,6 +1,7 @@
 from django.db import models
 from core.models import TimeStampedModel
 import datetime
+import phonenumbers
 
 
 class RSVP(TimeStampedModel):
@@ -9,6 +10,21 @@ class RSVP(TimeStampedModel):
     num_guests_allowed = models.SmallIntegerField(default=2)
     location = models.TextField(blank=True)
     message = models.TextField(blank=True)
+
+    def format_number(self):
+        try:
+            n = phonenumbers.parse(self.telephone, "US")
+            output = phonenumbers.format_number(n, phonenumbers.PhoneNumberFormat.NATIONAL)
+            return output
+        except:
+            return self.telephone
+
+    format_number.short_description = "Telephone"
+
+    formatted_telephone = property(format_number)
+
+    def __unicode__(self):
+        return "%s [%d]" % (self.email, self.id)
 
 
 class AccessCode(models.Model):
@@ -38,7 +54,7 @@ MEALS = (
 
 
 class Guest(models.Model):
-    rsvp = models.ForeignKey(RSVP)
+    rsvp = models.ForeignKey(RSVP, related_name="guests")
     name = models.CharField(max_length=128)
     meal = models.SmallIntegerField(choices=MEALS)
     notes = models.TextField(blank=True)

@@ -12,5 +12,6 @@ urlpatterns = [
 
     url(r'^$', index),
     url(r'^wedding/', include('core.urls')),
+    url(r'^locations/', include('locations.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

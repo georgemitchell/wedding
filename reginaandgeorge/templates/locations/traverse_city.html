@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block extra_css %}
+<link type="text/css" href="/static/css/jquery.countdown.css" rel="stylesheet">
+{% endblock %}
+{% block title_suffix %} - Traverse City{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="places"%}
+{% endblock %}
+{% block content %}
+
+<div class="pt-page pt-page-5 pt-page-current">
+      <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-travel"></div>
+        <div class="page-scroll">
+          <div class="bg-main-image-overlay-2-gallery">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Traverse City<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="col-md-12 location-content">
+                  <p>
+                    Often cited as The Best Small Town in America, this town of 15,000 is simply a lovely place to “hang out.” With its freshwater beaches, lovely views, delicious restaurants, and genuinely nice people, it’s been hailed as a foodie paradise and there is so much to see and do that we’ve broken it down by category! 
+                  </p>
+                  </div>
+                </div>
+                {% include "locations/destinations.html" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

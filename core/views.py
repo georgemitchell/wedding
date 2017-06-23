@@ -44,21 +44,6 @@ def travel(request):
     return HttpResponse(template.render(Context({})))
 
 
-def traverse_city(request):
-    template = loader.get_template('wedding/traverse_city.html')
-    return HttpResponse(template.render(Context({})))
-
-
-def leelanau(request):
-    template = loader.get_template('wedding/leelanau.html')
-    return HttpResponse(template.render(Context({})))
-
-
-def old_mission(request):
-    template = loader.get_template('wedding/old_mission.html')
-    return HttpResponse(template.render(Context({})))
-
-
 class RSVPCreateView(CreateView):
     form_class = None
     success_url = None

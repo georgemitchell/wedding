@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block extra_css %}
+<link type="text/css" href="/static/css/jquery.countdown.css" rel="stylesheet">
+<style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+</style>
+{% endblock %}
+{% block title_suffix %} - Old Mission{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="places"%}
+{% endblock %}
+{% block content %}
+<div class="pt-page pt-page-5 pt-page-current">
+      <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-travel"></div>
+        <div class="page-scroll">
+          <div class="bg-main-image-overlay-2-gallery">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Our Favorite Places<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <form class="form floating-label text-left form-validate" action="" method="get" id="search_form">
+                    <div class="col-md-12 location-content">
+                      <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                        <div class="form-group">
+                          <select id="location_id" name="location_id" class="form-control select2-list dirty">
+                            <option value="">Select Location</option>
+                            {% for value, display in locations %}
+                              <option value="{{ value }}"{% if value == location %} selected{% endif %}>{{ display }}</option>
+                            {% endfor %}
+                          </select>
+                          <label for="location_id">Location</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                        <div class="form-group">
+                          <select id="category_id" name="category_id" class="form-control select2-list dirty">
+                            <option value="">Select Category</option>
+                            {% for value, display in categories %}
+                              <option value="{{ value }}"{% if value == category %} selected{% endif %}>{{ display }}</option>
+                            {% endfor %}
+                          </select>
+                          <label for="category_id">Category</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                        <div class="rsvp-button text-center">
+                          <button type="submit" class="hvr-sweep-to-right">FILTER</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                {% if destinations %}
+                <div class="container">
+                  <div id="map"></div>
+                  <script>
+                  {% include "locations/map.js" %}
+                  </script>
+                  <script async defer
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Bo45aHLgOht3f0318o4tBq09aiImqek&callback=initMap">
+                  </script>
+                </div>
+
+                {% for destination in destinations %}
+                  {% include "locations/destination.html" %}
+                {% endfor %}
+                {% else %}
+                <div class="container">
+                  <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <div class="timeline-img">
+                      <img src="/static/img/nxnw.gif" />
+                    </div>
+                    <p style="color: #000">As Roger Thornhill used to say, "Whoops!"  It looks like you need to change the filter settings to yield some results.</p>
+                </div>
+
+
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

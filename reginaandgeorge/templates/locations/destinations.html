@@ -1,0 +1,16 @@
+{% for category in destinations %}
+  <h4 style="color:#000;text-align: center;">{{ category.name }}</h4>
+  {% if category.heading %}
+  <div class="container">
+    <div class="col-md-12 location-content">
+    <p>
+      {{ category.heading|safe }} 
+    </p>
+    </div>
+  </div>
+  <div class="container">&nbsp;</div>
+  {% endif %}
+  {% for destination in category.destinations %}
+    {% include "locations/destination.html" %}
+  {% endfor %}
+{% endfor %}

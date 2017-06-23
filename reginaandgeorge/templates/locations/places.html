@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block extra_css %}
+<link type="text/css" href="/static/css/jquery.countdown.css" rel="stylesheet">
+{% endblock %}
+{% block title_suffix %} - Our Favorite Places{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="places"%}
+{% endblock %}
+{% block content %}
+
+<div class="pt-page pt-page-5 pt-page-current">
+       <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-wedding"></div>
+        <div class="page-fixed">
+          <div class="bg-main-image-overlay-fixed">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Our Favorite Places<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="col-md-12 about-the-people">
+                    <p class="col-md-6 col-md-offset-3 col-xs-12">Regina adores the Traverse City area, and she has made it her mission to have George love it, too! Her grandmother, along with a group of other Chicago-based families, would spend summers in Old Mission starting in 1910! “The Strip,” a two-mile stretch of land on the West Bay with Regina’s parents’ house at the South, is dotted with old cabins and cottages, most of which are still owned by extended family. Needless to say, it is a very special place, and George proposed to Regina there last summer. Smart man...how could she say no in her favorite place in the world?!  <br /><br />
+                      We are so excited to share this place with you! Click on the places below to see more details.
+                    </p>
+                  </div>
+                </div>
+                <div class="container ceremony-section">
+                  <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 responsive-margin text-center wow fadeInLeft padding-left-right-zero" data-class="fadeInLeft">
+                    <div class="white-box ceremony-detail"> 
+                      <h5>Old Mission
+                      </h5>
+                      <div class="timeline-img"> 
+                      <a href="/locations/old_mission/">
+                        <img src="/static/img/om_square.jpg" alt="Old Mission"/>
+                      </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 responsive-margin text-center wow fadeInUp padding-left-right-zero" data-class="fadeInUp">
+                    <div class="white-box ceremony-detail"> 
+                      <h5>Traverse City</h5>
+                      <div class="timeline-img"> 
+                        <a href="/locations/traverse_city/">
+                          <img src="/static/img/tc_square.jpg" alt="Traverse City" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 responsive-margin text-center wow fadeInRight padding-left-right-zero" data-class="fadeInRight"> 
+                    <div class="white-box ceremony-detail">
+                      <h5>Leelanau</h5>
+                      <div class="timeline-img"> 
+                        <a href="/locations/leelanau/">
+                          <img src="/static/img/l_square.jpg" alt="Leelanau" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block extra_css %}
+<link type="text/css" href="/static/css/jquery.countdown.css" rel="stylesheet">
+{% endblock %}
+{% block title_suffix %} - Wineries{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="places"%}
+{% endblock %}
+{% block content %}
+
+<div class="pt-page pt-page-5 pt-page-current">
+      <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-travel"></div>
+        <div class="page-scroll">
+          <div class="bg-main-image-overlay-2-gallery">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Wineries<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="col-md-12 location-content">
+                  <p>
+                    Want to sample some of the best local wines? These won the big awards in 2016! 
+                  <p>
+                  <p>
+                    <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                      <h5 style="text-align: center">Local Reds</h5>
+                      <div style="text-align: center; font-weight: 300">
+                        <span style="font-weight: normal">Arcturos Pinot Noir</span>: <a href="#BlackStarFarms">Black Star Farms</a> <br />
+                        (there’s a tasting room in Suttons Bay and Old Mission)
+                        <br />
+                        <span style="font-weight: normal">Pinot Noir</span>, <a href="#BrysEstate">Brys Estate</a> (Old Mission)
+                        <br />
+                        <span style="font-weight: normal">House Red</span>, <a href="#BlackStarFarms">Black Star Farms</a> (Suttons Bay)
+                        <br />
+                        <span style="font-weight: normal">Naughty Red</span>, <a href="#ChateauChantal">Chateau Chantal</a> (Old Mission)
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                      <h5 style="text-align: center">Local White Wines</h5>
+                      <div style="text-align: center; font-style: italic; font-weight: 300">This area is especially known for its Rieslings!</div>
+                      <div style="font-weight: 300; text-align: center">
+                        <span style="font-weight: normal">Arcturos Late Harvest Riesling</span>, <a href="#BlackStarFarms">Black Star Farms</a> (Suttons Bay)
+                        <br />
+                        <span style="font-weight: normal">Late Harvest Riesling</span>, <a href="#ChateauGrandTraverse">Chateau Grand Traverse</a> (Old Mission)
+                        <br />
+                        <span style="font-weight: normal">Late Harvest Riesling</span>, <a href="#ChateauChantal">Chateau Chantal</a> (Old Mission) 
+                      </ul>
+                    </div>
+
+                  </p>
+                  </div>
+                </div>
+                {% for destination in destinations %}
+                  {% include "locations/destination.html" %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

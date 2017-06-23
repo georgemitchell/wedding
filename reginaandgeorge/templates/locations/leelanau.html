@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block extra_css %}
+<link type="text/css" href="/static/css/jquery.countdown.css" rel="stylesheet">
+{% endblock %}
+{% block title_suffix %} - Leelanau Peninsula{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="places"%}
+{% endblock %}
+
+{% block content %}
+
+<div class="pt-page pt-page-5 pt-page-current">
+      <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-travel"></div>
+        <div class="page-scroll">
+          <div class="bg-main-image-overlay-2-gallery">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Leelanau Peninsula<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="col-md-12 location-content">
+                  <p>
+                    The wedding site, <a href="http://www.cicconevineyard.com/index.html" target="_blank">Ciccone Vineyard and Winery</a>, is in Suttons Bay, and there are a number of hotels in the area. Staying in Leelanau would put you 10-20 minutes from the wedding site, 20-30 minutes from Traverse City, and 40-50 minutes from Old Mission. The Leelanau Peninsula is substantially larger than the Old Mission Peninsula and is home to numerous wineries and distilleries as well as <a href="http://www.sleepingbeardunes.com/" target="_blank">The Sleeping Bear Dunes</a>. Named the "Most Beautiful Place in America" on ABC's Good Morning America, the dunes are definitely worth a visit! 
+                  </p>
+                  </div>
+                </div>
+                {% include "locations/destinations.html" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

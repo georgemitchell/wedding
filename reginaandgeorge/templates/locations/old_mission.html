@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block extra_css %}
+<link type="text/css" href="/static/css/jquery.countdown.css" rel="stylesheet">
+{% endblock %}
+{% block title_suffix %} - Old Mission{% endblock %}
+{% block menu %}
+<!--menu bar starts from here-->
+{% include "core/static_menu.html" with active_menu="places"%}
+{% endblock %}
+{% block content %}
+
+<div class="pt-page pt-page-5 pt-page-current">
+      <div class="container-fluid display_none bg-main-image">
+        <div class="blur-img bg-travel"></div>
+        <div class="page-scroll">
+          <div class="bg-main-image-overlay-2-gallery">
+            <div class="main-section-s2">
+              <div class="col-md-12">
+                <div class="page-title wow fadeInUp" data-class="fadeInUp">
+                  <h2>Old Mission<span><i class="glyphicon glyphicon-heart"></i></span></h2>
+                </div>
+                <div class="container">
+                  <div class="col-md-12 location-content">
+                  <p>
+                    This 22-mile-long finger of land that divides East and West Grand Traverse Bays boasts a beachy coastline, rolling hillsides, cherry orchards, breathtaking views, cute fruit stands, one brewery/distillery, and 10 wineries with tasting rooms and vineyards. It is dreamy and the perfect place to spend an afternoon.  
+                  </p>
+                  </div>
+                </div>
+                {% include "locations/destinations.html" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

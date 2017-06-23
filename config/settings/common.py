@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'maintenancemode',
     'rsvp',
+    'locations',
 )
 
 MIDDLEWARE_CLASSES = (

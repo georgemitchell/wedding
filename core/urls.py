@@ -11,8 +11,5 @@ urlpatterns = [
     url(r'^gifts', views.gifts, name="gifts"),
     url(r'^rsvp/', include('rsvp.urls')),
     url(r'^travel', views.travel, name="travel"),
-    url(r'^traverse_city', views.traverse_city, name="traverse_city"),
-    url(r'^leelanau', views.leelanau, name="leelanau"),
-    url(r'^old_mission', views.old_mission, name="old_mission"),
     #url(r'^$', views.RSVPCreateView.as_view(), name='rsvp'),
 ]

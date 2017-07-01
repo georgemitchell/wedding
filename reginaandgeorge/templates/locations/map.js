@@ -212,7 +212,7 @@ function initMap() {
       icon: '/static/img/bandb.png'
     },
     wineglass: {
-      icon: '/static/img/wineglass.png'
+      icon: '/static/img/winery-icon.png'
     },
     shop: {
       icon: '/static/img/shop.png'
@@ -221,7 +221,7 @@ function initMap() {
       icon: '/static/img/food.png'
     },
     attraction: {
-      icon: '/static/img/attraction.png'
+      icon: '/static/img/camera-icon.png'
     }
   };
   var shape = {

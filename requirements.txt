@@ -1,5 +1,5 @@
 # 1.8 LTS through APR 2018
-django==1.8
+django==3.2.4
 django-environ==0.3.0
 django-maintenancemode==0.11.2
 psycopg2==2.6.1

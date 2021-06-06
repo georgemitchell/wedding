@@ -28,7 +28,7 @@ class RSVP(TimeStampedModel):
 
 
 class AccessCode(models.Model):
-    rsvp = models.ForeignKey(RSVP)
+    rsvp = models.ForeignKey(RSVP, on_delete=models.CASCADE)
     access_code = models.CharField(max_length=8)
     created = models.DateTimeField(auto_now_add=True)
     expires = models.DateTimeField()
@@ -54,13 +54,13 @@ MEALS = (
 
 
 class Guest(models.Model):
-    rsvp = models.ForeignKey(RSVP, related_name="guests")
+    rsvp = models.ForeignKey(RSVP, on_delete=models.CASCADE, related_name="guests")
     name = models.CharField(max_length=128)
     meal = models.SmallIntegerField(choices=MEALS)
     notes = models.TextField(blank=True)
 
 
 class NotAttending(models.Model):
-    rsvp = models.ForeignKey(RSVP)
+    rsvp = models.ForeignKey(RSVP, on_delete=models.CASCADE)
     name = models.CharField(max_length=128)
     message = models.TextField(blank=True)

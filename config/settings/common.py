@@ -62,6 +62,12 @@ MIDDLEWARE_CLASSES = (
     'maintenancemode.middleware.MaintenanceModeMiddleware',
 )
 
+MIDDLEWARE = [
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+]
+
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [

@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='guest',
             name='rsvp',
-            field=models.ForeignKey(related_name='guests', to='rsvp.RSVP'),
+            field=models.ForeignKey(on_delete=models.CASCADE, related_name='guests', to='rsvp.RSVP'),
         ),
     ]

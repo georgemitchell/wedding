@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Destination
+from locations.models import Destination
 
 
 class DestinationAdmin(admin.ModelAdmin):

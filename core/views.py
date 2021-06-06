@@ -1,47 +1,33 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.template import Context, loader
 
 # Create your views here.
 from django.views.generic.edit import CreateView, UpdateView
 
 
 def index(request):
-    # Load the template myblog/templates/index.html
-    template = loader.get_template('wedding/home.html')
-    context = Context({})
+    return render(request, "index.html")
 
-    return HttpResponse(template.render(context))
-
+def archive(request):
+    return render(request, "wedding/home.html")
 
 def couple(request):
-    template = loader.get_template('wedding/couple.html')
-    return HttpResponse(template.render(Context({})))
-
+    return render(request, "wedding/couple.html")
 
 def story(request):
-    template = loader.get_template('wedding/story.html')
-    return HttpResponse(template.render(Context({})))
-
+    return render(request, "wedding/story.html")
 
 def people(request):
-    template = loader.get_template('wedding/people.html')
-    return HttpResponse(template.render(Context({})))
-
+    return render(request, "wedding/people.html")
 
 def wedding(request):
-    template = loader.get_template('wedding/wedding.html')
-    return HttpResponse(template.render(Context({})))
-
+    return render(request, "wedding/wedding.html")
 
 def gifts(request):
-    template = loader.get_template('wedding/gifts.html')
-    return HttpResponse(template.render(Context({})))
-
+    return render(request, "wedding/gifts.html")
 
 def travel(request):
-    template = loader.get_template('wedding/travel.html')
-    return HttpResponse(template.render(Context({})))
+    return render(request, "wedding/travel.html")
 
 
 class RSVPCreateView(CreateView):

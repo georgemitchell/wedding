@@ -5,10 +5,10 @@ from django.views.generic.base import ContextMixin, View, TemplateResponseMixin
 from django.views.generic.edit import CreateView
 from django.template import Context, loader
 from django.http import HttpResponse, Http404
-from django.core.context_processors import csrf
+from django.template.context_processors import csrf
 from django.forms.formsets import BaseFormSet
 from django.forms.formsets import formset_factory
-from email import send_access_code, send_confirmation_email
+from rsvp.email import send_access_code, send_confirmation_email
 import datetime
 import random
 import string
@@ -201,10 +201,8 @@ class EmailCheck(CreateView):
             form.instance = rsvp
             self.object = rsvp
             # response redirect here?
-            print "Found existing"
         except RSVP.DoesNotExist:
             self.object = self.form.save()
-            print self.object
             pass
         if form.is_valid():
             email = self.cleaned_data["email"]
@@ -212,14 +210,11 @@ class EmailCheck(CreateView):
                 rsvp = RSVP.objects.get(email=email)
                 self.object = rsvp
                 form.instance = rsvp
-                print "Found existing"
             except RSVP.DoesNotExist:
                 self.object = self.form.save()
-                print self.object
                 pass
             return self.form_valid(form)
         else:
-            print "oops"
             self.object = None
             return self.form_invalid(form)
 

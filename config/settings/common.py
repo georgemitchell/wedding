@@ -32,7 +32,7 @@ SECRET_KEY = '6*+82+y3%-_dqwa_y+gn5(u!uk07^izhxlfqdmwqxh3%^4e-!s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.reginaandgeorge.com"]
 
 MAINTENANCE_MODE = env.bool('MAINTENANCE_MODE', default=False)
 

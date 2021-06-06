@@ -41,11 +41,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='guest',
             name='rsvp',
-            field=models.ForeignKey(to='rsvp.RSVP'),
+            field=models.ForeignKey(on_delete=models.CASCADE, to='rsvp.RSVP'),
         ),
         migrations.AddField(
             model_name='accesscode',
             name='rsvp',
-            field=models.ForeignKey(to='rsvp.RSVP'),
+            field=models.ForeignKey(on_delete=models.CASCADE, to='rsvp.RSVP'),
         ),
     ]

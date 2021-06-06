@@ -1,13 +1,11 @@
 # coding=utf-8
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.template import Context, loader
-from models import Destination, Location, Category
+from locations.models import Destination, Location, Category
 
 
 def index(request):
-    template = loader.get_template('locations/places.html')
-    return HttpResponse(template.render(Context({})))
+    return render(request, "locations/places.html")
 
 
 def search(request):
@@ -31,7 +29,7 @@ def search(request):
         "category": category_id,
         "location": location_id
     }
-    return HttpResponse(template.render(Context(context)))
+    return render(request, "locations/search.html", context)
 
 
 def get_destinations(location_id, categories, headings):
@@ -79,8 +77,7 @@ def traverse_city(request):
     }
 
     destinations = get_destinations(Location.TraverseCity.id, categories, headings)
-    template = loader.get_template('locations/traverse_city.html')
-    return HttpResponse(template.render(Context({"destinations": destinations})))
+    return render(request, "locations/traverse_city.html", {"destinations": destinations})
 
 
 def leelanau(request):
@@ -96,8 +93,7 @@ def leelanau(request):
     }
 
     destinations = get_destinations(Location.Leelanau.id, categories, headings)
-    template = loader.get_template('locations/leelanau.html')
-    return HttpResponse(template.render(Context({"destinations": destinations})))
+    return render(request, "locations/leelanau.html", {"destinations": destinations})
 
 
 def old_mission(request):
@@ -113,11 +109,9 @@ def old_mission(request):
         Category.BedAndBreakfast.id: 'Old Mission has become a destination for couples seeking a romantic getaway. Unfortunately, this means no children in most places. If, however, you are sans children or planning to leave the kids at home, Old Mission will be the perfect place to stay.'
     }
     destinations = get_destinations(Location.OldMission.id, categories, headings)
-    template = loader.get_template('locations/old_mission.html')
-    return HttpResponse(template.render(Context({"destinations": destinations})))
+    return render(request, "locations/old_mission.html", {"destinations": destinations})
 
 
 def wines(request):
     destinations = Destination.objects.filter(category=Category.Winery.id).order_by("name")
-    template = loader.get_template('locations/wines.html')
-    return HttpResponse(template.render(Context({"destinations": destinations})))
+    return render(request, "locations/wines.html", {"destinations": destinations})

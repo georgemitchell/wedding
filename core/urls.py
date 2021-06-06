@@ -1,15 +1,16 @@
-import views
+import core.views as views
 
 from django.conf.urls import include, url
+from django.urls import include, path
 
 urlpatterns = [
-    url(r'^$', views.index, name="home"),
-    url(r'^couple', views.couple, name="couple"),
-    url(r'^story', views.story, name="story"),
-    url(r'^people', views.people, name="people"),
-    url(r'^wedding', views.wedding, name="wedding"),
-    url(r'^gifts', views.gifts, name="gifts"),
-    url(r'^rsvp/', include('rsvp.urls')),
-    url(r'^travel', views.travel, name="travel"),
+    path('', views.archive, name="home"),
+    path('couple/', views.couple, name="couple"),
+    path('story/', views.story, name="story"),
+    path('people/', views.people, name="people"),
+    path('wedding/', views.wedding, name="wedding"),
+    path('gifts/', views.gifts, name="gifts"),
+    path('rsvp/', include('rsvp.urls')),
+    path('travel/', views.travel, name="travel"),
     #url(r'^$', views.RSVPCreateView.as_view(), name='rsvp'),
 ]

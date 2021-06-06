@@ -26,6 +26,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='notattending',
             name='rsvp',
-            field=models.ForeignKey(to='rsvp.RSVP'),
+            field=models.ForeignKey(on_delete=models.CASCADE, to='rsvp.RSVP'),
         ),
     ]

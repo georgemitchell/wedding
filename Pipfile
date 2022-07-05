@@ -9,7 +9,7 @@ django-maintenancemode = "==0.11.2"
 psycopg2 = "*"
 gunicorn = "==19.4.5"
 phonenumbers = "==8.4.2"
-Django = "==3.2.4"
+Django = "==3.2.14"
 
 [dev-packages]
 
